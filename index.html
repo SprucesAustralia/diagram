@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spruces AI Software Stack</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .stack-container {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+        }
+        .layer {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .layer:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .layer h2 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .layer p {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #666;
+        }
+        .channels { background-color: #3498db; color: white; }
+        .middleware { background-color: #2ecc71; color: white; }
+        .ai-agents { background-color: #e67e22; color: white; }
+        .database { background-color: #9b59b6; color: white; }
+        .external { background-color: #e74c3c; color: white; }
+        .arrow {
+            width: 2px;
+            height: 30px;
+            background-color: #333;
+            margin: 0 auto;
+            position: relative;
+        }
+        .arrow::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: -4px;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid #333;
+        }
+        .data-flow {
+            position: absolute;
+            top: 0;
+            right: -100px;
+            width: 80px;
+            text-align: left;
+            font-size: 0.9em;
+            color: #333;
+        }
+        .data-flow p {
+            margin: 10px 0;
+        }
+        @media (max-width: 600px) {
+            .stack-container { max-width: 100%; }
+            .data-flow { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stack-container">
+        <div class="layer channels">
+            <h2>Communication Channels</h2>
+            <p>Phone (Voice) | Email | WhatsApp | Website Form</p>
+        </div>
+        <div class="arrow"></div>
+        <div class="layer middleware">
+            <h2>Node.js Middleware</h2>
+            <p>API Endpoints | Webhook Handlers | Data Processing | AI Integration</p>
+        </div>
+        <div class="arrow"></div>
+        <div class="layer ai-agents">
+            <h2>AI Agents</h2>
+            <p>Voice AI (Cflow) | Text AI (OpenAI/ChatGPT) | Quote Generation AI</p>
+        </div>
+        <div class="arrow"></div>
+        <div class="layer database">
+            <h2>Superbase Database</h2>
+            <p>Customer Details | Cleaner Details | Bookings</p>
+        </div>
+        <div class="arrow"></div>
+        <div class="layer external">
+            <h2>External Services (Optional)</h2>
+            <p>Payment Gateway (Stripe)</p>
+        </div>
+        <div class="data-flow">
+            <p>1. Input from Channels</p>
+            <p>2. Middleware Processing</p>
+            <p>3. AI Analysis</p>
+            <p>4. Data Storage</p>
+            <p>5. Response to Customer</p>
+        </div>
+    </div>
+</body>
+</html>
