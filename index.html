@@ -3,120 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spruces AI Software Stack</title>
+    <title>Project Brief: Spruces AI-Driven Automation</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
             margin: 0;
             padding: 20px;
-        }
-        .stack-container {
-            width: 100%;
-            max-width: 600px;
-            text-align: center;
-            position: relative;
-        }
-        .layer {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 15px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .layer:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-        .layer h2 {
-            margin: 0 0 10px;
-            font-size: 1.5em;
+            line-height: 1.6;
             color: #333;
         }
-        .layer p {
-            margin: 5px 0;
-            font-size: 1em;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h1 { font-size: 2.5em; }
+        h2 { font-size: 1.8em; }
+        p, ul {
+            font-size: 1.1em;
             color: #666;
         }
-        .channels { background-color: #3498db; color: white; }
-        .middleware { background-color: #2ecc71; color: white; }
-        .ai-agents { background-color: #e67e22; color: white; }
-        .database { background-color: #9b59b6; color: white; }
-        .external { background-color: #e74c3c; color: white; }
-        .arrow {
-            width: 2px;
-            height: 30px;
-            background-color: #333;
-            margin: 0 auto;
-            position: relative;
+        ul {
+            list-style-type: none;
+            padding-left: 0;
         }
-        .arrow::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: -4px;
-            width: 0;
-            height: 0;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 10px solid #333;
+        li:before {
+            content: "•";
+            color: #3498db;
+            margin-right: 10px;
         }
-        .data-flow {
-            position: absolute;
-            top: 0;
-            right: -100px;
-            width: 80px;
-            text-align: left;
-            font-size: 0.9em;
-            color: #333;
-        }
-        .data-flow p {
-            margin: 10px 0;
+        .section {
+            margin-bottom: 20px;
         }
         @media (max-width: 600px) {
-            .stack-container { max-width: 100%; }
-            .data-flow { display: none; }
+            .container { padding: 15px; }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+            p, ul { font-size: 1em; }
         }
     </style>
 </head>
 <body>
-    <div class="stack-container">
-        <div class="layer channels">
-            <h2>Communication Channels</h2>
-            <p>Phone (Voice) | Email | WhatsApp | Website Form</p>
+    <div class="container">
+        <h1>Project Brief: AI-Driven Automation for Spruces Cleaning Services</h1>
+
+        <div class="section">
+            <h2>Overview</h2>
+            <p>Spruces, a commercial cleaning service company, aims to streamline its customer interactions by leveraging AI agents to automate inquiries, quote generation, and booking processes. This capstone project, undertaken by a team from the University of Southern Queensland, focuses on developing a system that enables customers to interact with Spruces through natural language via multiple channels—phone calls, emails, WhatsApp, and website forms—eliminating the need for traditional user interfaces (UIs) where possible. The system will integrate seamlessly with Spruces’ existing Superbase database to manage customer data, cleaner information, and bookings, prioritizing speed and convenience to enhance customer satisfaction and business efficiency.</p>
         </div>
-        <div class="arrow"></div>
-        <div class="layer middleware">
-            <h2>Node.js Middleware</h2>
-            <p>API Endpoints | Webhook Handlers | Data Processing | AI Integration</p>
+
+        <div class="section">
+            <h2>Objectives</h2>
+            <ul>
+                <li>Automate Customer Interactions: Develop AI agents to handle customer inquiries, generate instant quotes, and facilitate bookings using voice and text-based communication.</li>
+                <li>Database Integration: Connect all customer interaction data to the Superbase database for storage, retrieval, and management.</li>
+                <li>Enhance Speed and Convenience: Deliver quotes to customers within minutes of their inquiry, minimizing delays and human intervention.</li>
+                <li>Reduce UI Dependency: Shift interactions to natural language channels (voice, text, email) to simplify the customer experience.</li>
+            </ul>
         </div>
-        <div class="arrow"></div>
-        <div class="layer ai-agents">
-            <h2>AI Agents</h2>
-            <p>Voice AI (Cflow) | Text AI (OpenAI/ChatGPT) | Quote Generation AI</p>
+
+        <div class="section">
+            <h2>Scope</h2>
+            <h3>Customer Interaction Module:</h3>
+            <ul>
+                <li>Voice AI agent (leveraging Cflow or a similar tool) for phone-based inquiries and responses.</li>
+                <li>Text-based AI agent for processing emails and WhatsApp messages.</li>
+                <li>Automated quote generation based on customer-provided details (e.g., facility type, size, cleaning requirements).</li>
+            </ul>
+            <h3>Database Integration:</h3>
+            <ul>
+                <li>Store all interaction data (e.g., customer details, inquiry transcripts, quotes) in Superbase.</li>
+                <li>Enable real-time data retrieval and updates for customer and cleaner management.</li>
+            </ul>
+            <h3>Automation Workflows:</h3>
+            <ul>
+                <li>Develop a Node.js middleware application to process inputs from various channels, interact with AI models, and manage database operations.</li>
+                <li>Implement webhooks and REST APIs to connect communication channels, AI agents, and Superbase.</li>
+            </ul>
+            <h3>Security and Privacy:</h3>
+            <ul>
+                <li>Implement access controls to protect customer data in Superbase.</li>
+                <li>Ensure compliance with privacy standards to prevent unauthorized data access or breaches.</li>
+            </ul>
         </div>
-        <div class="arrow"></div>
-        <div class="layer database">
-            <h2>Superbase Database</h2>
-            <p>Customer Details | Cleaner Details | Bookings</p>
+
+        <div class="section">
+            <h2>Deliverables</h2>
+            <h3>Requirements Specification:</h3>
+            <ul>
+                <li>Document: Detailed functional and non-functional requirements, including use cases for customer inquiries, quote generation, and booking workflows.</li>
+                <li>Example Use Cases: Customer calls to request a quote, AI processes the request and stores data, quote is sent via email or text.</li>
+            </ul>
+            <h3>System Design:</h3>
+            <ul>
+                <li>Architecture Diagram: Visual representation of system components and data flow (see below).</li>
+                <li>Data Flow Diagrams: Illustrate how data moves from communication channels to middleware, AI agents, and the database.</li>
+            </ul>
+            <h3>Implementation:</h3>
+            <ul>
+                <li>AI Agents: Voice AI (Cflow-based) and text AI for customer interactions.</li>
+                <li>Node.js Middleware: Application with REST APIs and webhooks to handle data processing and integration.</li>
+                <li>Database Integration: Scripts to connect Node.js with Superbase for data storage and retrieval.</li>
+            </ul>
+            <h3>Testing:</h3>
+            <ul>
+                <li>Unit Tests: Validate individual components (e.g., AI response accuracy, API functionality).</li>
+                <li>Integration Tests: Ensure seamless operation between channels, middleware, AI, and database.</li>
+                <li>User Acceptance Testing: Simulate customer interactions to verify system performance and quote delivery speed.</li>
+            </ul>
+            <h3>Documentation:</h3>
+            <ul>
+                <li>Technical Documentation: System architecture, codebase explanation, and API references.</li>
+                <li>User Guide: Instructions for Spruces staff on system maintenance (minimal UI involvement).</li>
+                <li>Deployment Guide: Steps to deploy and scale the system.</li>
+            </ul>
+            <h3>Project Management:</h3>
+            <ul>
+                <li>Progress Reports: Weekly updates on development milestones.</li>
+                <li>Meeting Minutes: Records of team discussions and action items (e.g., WhatsApp group logs).</li>
+                <li>Final Presentation: Demonstration of the system to stakeholders at the end of the semester.</li>
+            </ul>
         </div>
-        <div class="arrow"></div>
-        <div class="layer external">
-            <h2>External Services (Optional)</h2>
-            <p>Payment Gateway (Stripe)</p>
+
+        <div class="section">
+            <h2>Timeline</h2>
+            <p>Duration: One semester (approximately 12-16 weeks), starting February 21.</p>
+            <p>Milestones:</p>
+            <ul>
+                <li>Week 1-2: Requirements gathering and role assignment.</li>
+                <li>Week 3-5: System design and initial Node.js setup.</li>
+                <li>Week 6-10: Implementation and integration of AI agents and database.</li>
+                <li>Week 11-13: Testing and refinement.</li>
+                <li>Week 14-16: Documentation and final presentation.</li>
+            </ul>
         </div>
-        <div class="data-flow">
-            <p>1. Input from Channels</p>
-            <p>2. Middleware Processing</p>
-            <p>3. AI Analysis</p>
-            <p>4. Data Storage</p>
-            <p>5. Response to Customer</p>
+
+        <div class="section">
+            <h2>Team Roles</h2>
+            <ul>
+                <li>Product Manager (Pujan Sapkota): Oversees project alignment with business goals, defines success metrics, and coordinates team efforts.</li>
+                <li>AI Developer: Designs and integrates voice and text AI agents using Cflow and OpenAI tools.</li>
+                <li>Backend Developer (Kripesh Bista): Develops Node.js middleware, APIs, and Superbase integration.</li>
+                <li>Quality Assurance Tester (Nitesh Wosti): Conducts testing to ensure system reliability and accuracy.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Success Criteria</h2>
+            <ul>
+                <li>AI handles 80% of customer inquiries without human intervention.</li>
+                <li>Quotes delivered to customers within 5 minutes of inquiry.</li>
+                <li>Seamless Superbase integration with no data loss.</li>
+                <li>Positive feedback from Spruces on system speed and customer conversion rates.</li>
+            </ul>
         </div>
     </div>
 </body>
